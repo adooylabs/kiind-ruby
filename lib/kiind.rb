@@ -89,18 +89,6 @@ module Kiind
   end
 
   def self.creategift(options = {})
-    # data = '{
-    #       "message":"this is from modenrmsg",
-    #       "subject":"gift card from modernmsg",
-    #       "contacts": [{"firstname":"Audee", "lastname":"Velasco","email":"auds@adooylabs.com"}],
-    #       "marketplace_gifts": [{"id":1,"price_in_cents":5000}],
-    #       "id":"GiftCardTo808",
-    #       "expiry":"2012-12-20",
-    #       "quote":true
-    #     }'
-
-    # Kiind.creategift(message: "Thank you for being an awesome person", subject: "Present from ModemMsg", contacts: [{firstname: "Audee", lastname: "Velasco", email: "auds@adooylabs.com"}], marketplace_gifts: [{id:1, price_in_cents:5000}], id: "UserGenID001")
-
     #if expiry not set, set it to one year
     options[:expiry] = (Date.today + 365).to_s unless options[:expiry] != nil
 
